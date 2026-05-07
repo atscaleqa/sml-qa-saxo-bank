@@ -1,0 +1,188 @@
+unique_name: VW_DIM_CONTRACT.dataset
+object_type: dataset
+label: VW_DIM_CONTRACT.dataset
+columns:
+  - name: ASSET_TYPE_NAME
+    data_type: string
+  - name: AUM_ZERO_DATE
+    data_type: datetime
+  - name: BROKER_TYPE_ID
+    data_type: decimal(38,0)
+  - name: BROKER_TYPE_NAME
+    data_type: string
+  - name: BUSINESS_LINE_ID
+    data_type: decimal(38,0)
+  - name: BUSINESS_LINE_NAME
+    data_type: string
+  - name: CDD_RISK_PROFILE_ID
+    data_type: decimal(38,0)
+  - name: CDD_RISK_PROFILE_NAME
+    data_type: string
+  - name: CHOICE_OF_ACCOUNT_ID
+    data_type: decimal(38,0)
+  - name: CHOICE_OF_ACCOUNT_NAME
+    data_type: string
+  - name: CLOSING_OFFICE_ID
+    data_type: decimal(38,0)
+  - name: CLOSING_OFFICE_NAME
+    data_type: string
+  - name: COMMERCIAL_SOLUTION_GROUP_ID
+    data_type: decimal(38,0)
+  - name: COMMERCIAL_SOLUTION_GROUP_NAME
+    data_type: string
+  - name: COMMERCIAL_TRADER_SEGMENT_ID
+    data_type: decimal(38,0)
+  - name: COMMERCIAL_TRADER_SEGMENT_NAME
+    data_type: string
+  - name: CONTRACT_CREATED_DATE
+    data_type: date
+  - name: CONTRACT_CREATED_YEAR
+    data_type: decimal(4,0)
+  - name: CONTRACT_CREATED_YEAR_MONTH
+    data_type: string
+  - name: CONTRACT_FIRST_TRADE_DATE
+    data_type: date
+  - name: CONTRACT_FIRST_TRADE_DATE_YEAR
+    data_type: decimal(4,0)
+  - name: CONTRACT_FIRST_TRADE_DATE_YEAR_MONTH
+    data_type: string
+  - name: CONTRACT_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_IS_SEGREGATED
+    data_type: boolean
+  - name: CONTRACT_LAST_TRADE_DATE
+    data_type: date
+  - name: CONTRACT_NAME
+    data_type: string
+  - name: CONTRACT_RISK
+    data_type: string
+  - name: CONTRACT_START_TERMINATION
+    data_type: boolean
+  - name: CONTRACT_STATE_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_STATE_NAME
+    data_type: string
+  - name: CONTRACT_STATUS_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_STATUS_NAME
+    data_type: string
+  - name: CONTRACT_SUB_SOLUTION_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_SUB_SOLUTION_NAME
+    data_type: string
+  - name: CONTRACT_TERMINATION_DATE
+    data_type: datetime
+  - name: CONTRACT_TERMINATION_REASON_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_TERMINATION_REASON_NAME
+    data_type: string
+  - name: CONTRACT_TRADES_PER_MONTH
+    data_type: string
+  - name: CONTRACT_TRADES_PER_MONTH_ID
+    data_type: decimal(38,0)
+  - name: CONTRACT_TYPE
+    data_type: string
+  - name: CONTRACTUAL_SOLUTION_ID
+    data_type: decimal(38,0)
+  - name: CONTRACTUAL_SOLUTION_NAME
+    data_type: string
+  - name: COUNTRY_OF_RESIDENCE
+    data_type: string
+  - name: COUNTRY_OF_RESIDENCE_ID
+    data_type: string
+  - name: DW_FROM_DATE
+    data_type: datetime
+  - name: DW_IS_CURRENT
+    data_type: decimal(2,0)
+  - name: DW_TO_DATE
+    data_type: datetime
+  - name: HK_CLOSING_OFFICE
+    data_type: string
+  - name: HK_COMPOSITE_CONTRACT
+    data_type: string
+  - name: HK_CONTRACT
+    data_type: string
+  - name: HK_COUNTRY_OF_RESIDENCE
+    data_type: string
+  - name: HK_LEGAL_ENTITY
+    data_type: string
+  - name: HK_REPORTING_OFFICE
+    data_type: string
+  - name: HK_SALES_OFFICE
+    data_type: string
+  - name: HK_TAX_OFFICE
+    data_type: string
+  - name: HK_TOP_LEVEL_CONTRACT
+    data_type: string
+  - name: INSTITUTIONAL_LIFECYCLE_STATE_ID
+    data_type: decimal(38,0)
+  - name: INSTITUTIONAL_LIFECYCLE_STATE_NAME
+    data_type: string
+  - name: INTEND_TO_INVEST_CURRENCY
+    data_type: string
+  - name: INTEND_TO_INVEST_MAX
+    data_type: double
+  - name: INTEND_TO_INVEST_MIN
+    data_type: double
+  - name: INTEREST_IN_BONDS
+    data_type: boolean
+  - name: INTEREST_IN_CFDS
+    data_type: boolean
+  - name: INTEREST_IN_CONTRACTOPTONS
+    data_type: boolean
+  - name: INTEREST_IN_FUTURES
+    data_type: boolean
+  - name: INTEREST_IN_FXFORWARDS
+    data_type: boolean
+  - name: INTEREST_IN_FXOPTIONS
+    data_type: boolean
+  - name: INTEREST_IN_FXSPOT
+    data_type: boolean
+  - name: INTEREST_IN_MANAGEDFUNDS
+    data_type: boolean
+  - name: INTEREST_IN_PRECIOUSMETALS
+    data_type: boolean
+  - name: INTEREST_IN_SHARES
+    data_type: boolean
+  - name: LAST_DUEDILIGENCE_APPROVAL_DATE
+    data_type: datetime
+  - name: LEGAL_ENTITY_ID
+    data_type: decimal(38,0)
+  - name: LEGAL_ENTITY_NAME
+    data_type: string
+  - name: MMF_OPT_OUT
+    data_type: boolean
+  - name: PARTNER_BUSINESS_MANDATE_REASON_ID
+    data_type: decimal(38,0)
+  - name: PARTNER_BUSINESS_MANDATE_REASON_NAME
+    data_type: string
+  - name: POSITION_REPORTING_OUTSOURCED
+    data_type: boolean
+  - name: RENEWL_DUE_DATE
+    data_type: datetime
+  - name: REPORTING_OFFICE_ID
+    data_type: decimal(38,0)
+  - name: SALES_OFFICE_ID
+    data_type: decimal(38,0)
+  - name: SEGMENT_IGNORE_BULK_UPDATE
+    data_type: boolean
+  - name: SEGMENT_VALUE_NAME
+    data_type: string
+  - name: TAX_OFFICE_ID
+    data_type: decimal(38,0)
+  - name: TOP_LEVEL_CONTRACT_ID
+    data_type: decimal(38,0)
+  - name: TRANSACTION_REPORTING_OUTSOURCED
+    data_type: boolean
+  - name: TRANSMISSION_SERVICE
+    data_type: boolean
+  - name: VM_APPROVED
+    data_type: boolean
+  - name: WLC_DELEGATES_ENDCLIENT_REPORTING
+    data_type: boolean
+  - name: CON_LAST_TRADE_DATE
+    data_type: string
+    sql: cast( CONTRACT_LAST_TRADE_DATE  as string)
+connection_id: snowflake.connection
+immutable: true
+table: VW_CONTRACT

@@ -1,0 +1,76 @@
+unique_name: Originating Tool Hint
+object_type: dimension
+label: Originating Tool Hint
+hierarchies:
+  - unique_name: Originating Tool Hint Hierarchy
+    label: Originating Tool Hint Hierarchy
+    levels:
+      - unique_name: Originating Tool Hint Schema Id Key
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d1_PLATFORM
+            label: D1
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - PLATFORM
+            name_column: PLATFORM
+            sort_column: PLATFORM
+          - unique_name: d2_OPERATING_SYSTEM
+            label: D2
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - OPERATING_SYSTEM
+            name_column: OPERATING_SYSTEM
+            sort_column: OPERATING_SYSTEM
+          - unique_name: d3_BROWSER
+            label: D3
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - BROWSER
+            name_column: BROWSER
+            sort_column: BROWSER
+          - unique_name: d4_MODULE
+            label: D4
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - MODULE
+            name_column: MODULE
+            sort_column: MODULE
+          - unique_name: d_ORIGINATING_TOOL_HINT_ID
+            label: Originating Tool Hint ID
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - ORIGINATING_TOOL_HINT_ID
+            name_column: ORIGINATING_TOOL_HINT_ID
+            sort_column: ORIGINATING_TOOL_HINT_ID
+          - unique_name: d_ORIGINATING_TOOL_HINT_SCHEMA_ID
+            label: Tool Hint Schema ID
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            is_excel_pivot_table_property: false
+            is_user_defined_property: false
+            key_columns:
+              - ORIGINATING_TOOL_HINT_SCHEMA_ID
+            name_column: ORIGINATING_TOOL_HINT_SCHEMA_ID
+            sort_column: ORIGINATING_TOOL_HINT_SCHEMA_ID
+level_attributes:
+  - unique_name: Originating Tool Hint Schema Id Key
+    label: Originating Tool Hint Schema Id Key
+    dataset: VW_ORIGINATING_TOOL_HINT.dataset
+    is_hidden: true
+    key_columns:
+      - ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
+    name_column: ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

@@ -1,0 +1,64 @@
+unique_name: Office
+object_type: dimension
+label: Office
+hierarchies:
+  - unique_name: By Region
+    label: By Region
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Region
+      - unique_name: Office
+      - unique_name: Office Level
+        is_hidden: true
+  - unique_name: By Reporting Office
+    label: By Reporting Office
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Reporting Region Office
+      - unique_name: Office Level1
+      - unique_name: Office Level2
+      - unique_name: Office
+      - unique_name: Office Level
+        is_hidden: true
+level_attributes:
+  - unique_name: Office Level1
+    label: Office Level1
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE_LEVEL1_NAME
+    name_column: OFFICE_LEVEL1_NAME
+  - unique_name: Office Level2
+    label: Office Level2
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE_LEVEL2_NAME
+    name_column: OFFICE_LEVEL2_NAME
+  - unique_name: Office Level
+    label: Office Level
+    dataset: VW_OFFICE.dataset
+    is_hidden: true
+    key_columns:
+      - HK_OFFICE
+    name_column: HK_OFFICE
+  - unique_name: Office
+    label: Office
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE
+    name_column: OFFICE
+  - unique_name: Region
+    label: Region
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - REGION
+    name_column: REGION
+  - unique_name: Reporting Region Office
+    label: Reporting Region
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - REPORTING_REGION
+    name_column: REPORTING_REGION
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

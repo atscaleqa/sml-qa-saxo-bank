@@ -1,0 +1,30 @@
+unique_name: MME Allocation Rule Type
+object_type: dimension
+label: MME Allocation Rule Type
+hierarchies:
+  - unique_name: Al_Location_Rule Hierarchy
+    label: Al_Location_Rule Hierarchy
+    levels:
+      - unique_name: Al_Location_Rule Level
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_ALLOCATION_TYPE
+            label: Allocation Type
+            dataset: VW_MME_ALLOCATION.dataset
+            key_columns:
+              - ALLOCATION_RULE
+            name_column: ALLOCATION_RULE
+            sort_column: ALLOCATION_RULE
+is_degenerate: true
+level_attributes:
+  - unique_name: Al_Location_Rule Level
+    label: Al_Location_Rule Level
+    dataset: VW_MME_ALLOCATION.dataset
+    is_hidden: true
+    key_columns:
+      - ALLOCATION_RULE
+    name_column: ALLOCATION_RULE
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

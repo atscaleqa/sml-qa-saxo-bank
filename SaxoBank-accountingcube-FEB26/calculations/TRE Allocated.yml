@@ -1,0 +1,8 @@
+unique_name: TRE Allocated
+object_type: metric_calc
+label: TRE Allocated
+expression: >-
+  [Measures].[m_ALLOCATION_AMOUNT_DKK_sum] +
+  [Measures].[m_BENCHMARK_EARNING_DKK_sum]
+format: standard
+mdx_aggregate_function: SUM

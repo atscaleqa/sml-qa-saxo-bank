@@ -1,0 +1,12 @@
+unique_name: VW_MME_ALLOCATION_RULES.dataset
+object_type: dataset
+label: VW_MME_ALLOCATION_RULES.dataset
+connection_id: snowflake.connection
+table: VW_MME_ALLOCATION_RULES
+immutable: true
+
+columns:
+  - name: MME_RULES_GENERAL_ALLOCATION_ID
+    data_type: "decimal(38,0)"
+  - name: NAME
+    data_type: string

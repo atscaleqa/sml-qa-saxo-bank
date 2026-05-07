@@ -1,0 +1,8 @@
+unique_name: m_BENCHMARK_EARNING_DKK_sum
+object_type: metric
+label: Benchmark Earnings DKK
+calculation_method: sum
+format: standard
+unrelated_dimensions_handling: repeat
+dataset: VW_BENCHMARK_EARNINGS.dataset
+column: BENCHMARK_EARNING_DKK

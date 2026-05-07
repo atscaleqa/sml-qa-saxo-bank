@@ -1,0 +1,7 @@
+unique_name: TRE Estimate Allocated
+object_type: metric_calc
+label: TRE Estimate Allocated
+expression: >-
+  [Measures].[m_ESTIMATED_ALLOCATION_AMOUNT_DKK_sum]+
+  [Measures].[m_BENCHMARK_EARNING_DKK_sum]
+format: standard

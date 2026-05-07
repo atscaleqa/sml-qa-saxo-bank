@@ -1,0 +1,29 @@
+unique_name: Buy Sell
+object_type: dimension
+label: Buy Sell
+hierarchies:
+  - unique_name: Buy Sell Hierarchy
+    label: Buy Sell Hierarchy
+    levels:
+      - unique_name: Buy Sell Level
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_BUYSELL
+            label: Buy Sell
+            dataset: VW_BUY_SELL.dataset
+            key_columns:
+              - BUYSELL
+            name_column: BUYSELL
+            sort_column: BUYSELL
+level_attributes:
+  - unique_name: Buy Sell Level
+    label: Buy Sell
+    dataset: VW_BUY_SELL.dataset
+    is_hidden: true
+    key_columns:
+      - BUYSELL
+    name_column: BUYSELL
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

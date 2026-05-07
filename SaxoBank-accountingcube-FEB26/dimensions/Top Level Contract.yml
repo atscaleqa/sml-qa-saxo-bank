@@ -1,0 +1,129 @@
+unique_name: Top Level Contract
+object_type: dimension
+label: Top Level Contract
+hierarchies:
+  - unique_name: By Top Level Contract First Trade
+    label: By Top Level Contract First Trade
+    filter_empty: 'yes'
+    folder: Events
+    levels:
+      - unique_name: Top Level Contract First Trade Year
+      - unique_name: Top Level Contract First Trade Month
+      - unique_name: Top Level Contract First Trade Date
+      - unique_name: Top Level Contract Level
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_Top_Level_Contract_Commercial_Solution_Group
+            label: Top Level Contract Commercial Solution Group
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - COMMERCIAL_SOLUTION_GROUP_NAME
+            name_column: COMMERCIAL_SOLUTION_GROUP_NAME
+            sort_column: COMMERCIAL_SOLUTION_GROUP_NAME
+          - unique_name: d_Top_Level_Contract_COMMERCIAL_TRADER_SEGMENT_NAME_2
+            label: Top Level Contract Commercial Trader Segment
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - COMMERCIAL_TRADER_SEGMENT_NAME
+            name_column: COMMERCIAL_TRADER_SEGMENT_NAME
+            sort_column: COMMERCIAL_TRADER_SEGMENT_NAME
+          - unique_name: d_TOP_LEVEL_CONTRACT_ID
+            label: Top Level Contract ID
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: Events
+            key_columns:
+              - TOP_LEVEL_CONTRACT_ID
+            name_column: TOP_LEVEL_CONTRACT_ID
+            sort_column: TOP_LEVEL_CONTRACT_ID
+          - unique_name: d_Top_Level_Contract_Lead_Client_State
+            label: Top Level Contract Lead Client State
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: State
+            key_columns:
+              - CONTRACT_STATE_NAME
+            name_column: CONTRACT_STATE_NAME
+            sort_column: CONTRACT_STATE_NAME
+          - unique_name: d_TOP_LEVEL_CONTRACT_NAME
+            label: Top Level Contract Name
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: Events
+            key_columns:
+              - TOP_LEVEL_CONTRACT_NAME
+            name_column: TOP_LEVEL_CONTRACT_NAME
+            sort_column: TOP_LEVEL_CONTRACT_NAME
+          - unique_name: d_Top_Level_Contract_SEGMENT_VALUE
+            label: Top Level Contract Segment Value
+            associated_hierarchy: By Top Level Contract First Trade
+            dataset: VW_TOP_LEVEL_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - SEGMENT_VALUE_NAME
+            name_column: SEGMENT_VALUE_NAME
+            sort_column: SEGMENT_VALUE_NAME
+  - unique_name: By Top Level Contract Last Trade
+    label: By Top Level Contract Last Trade
+    filter_empty: 'yes'
+    folder: Events
+    levels:
+      - unique_name: Top Level Contract Last Trade Year
+      - unique_name: Top Level Contract Last Trade Month
+      - unique_name: Top Level Contract Last Trade Date
+      - unique_name: Top Level Contract Level
+        is_hidden: true
+level_attributes:
+  - unique_name: Top Level Contract First Trade Date
+    label: Top Level Contract First Trade Date
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - FIRST_TRADE_DATE
+      - FIRST_TRADE_DATE_YEAR_MONTH
+    name_column: FIRST_TRADE_DATE
+  - unique_name: Top Level Contract First Trade Month
+    label: Top Level Contract First Trade Month
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - FIRST_TRADE_DATE_YEAR_MONTH
+    name_column: FIRST_TRADE_DATE_YEAR_MONTH
+  - unique_name: Top Level Contract First Trade Year
+    label: Top Level Contract First Trade Year
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - FIRST_TRADE_DATE_YEAR
+    name_column: FIRST_TRADE_DATE_YEAR
+  - unique_name: Top Level Contract Last Trade Date
+    label: Top Level Contract Last Trade Date
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - LAST_TRADE_DATE
+      - LAST_TRADE_DATE_YEAR_MONTH
+    name_column: LAST_TRADE_DATE
+  - unique_name: Top Level Contract Last Trade Month
+    label: Top Level Contract Last Trade Month
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - LAST_TRADE_DATE_YEAR_MONTH
+    name_column: LAST_TRADE_DATE_YEAR_MONTH
+  - unique_name: Top Level Contract Last Trade Year
+    label: Top Level Contract Last Trade Year
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    key_columns:
+      - LAST_TRADE_DATE_YEAR
+    name_column: LAST_TRADE_DATE_YEAR
+  - unique_name: Top Level Contract Level
+    label: Top Level Contract Level
+    dataset: VW_TOP_LEVEL_CONTRACT.dataset
+    is_hidden: true
+    key_columns:
+      - HK_TOP_LEVEL_CONTRACT
+    name_column: HK_TOP_LEVEL_CONTRACT
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

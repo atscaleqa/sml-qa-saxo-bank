@@ -1,0 +1,36 @@
+unique_name: VW_ACCOUNTING_GENERAL_LEDGER_ACCOUNT.dataset
+object_type: dataset
+label: VW_ACCOUNTING_GENERAL_LEDGER_ACCOUNT.dataset
+columns:
+  - name: GLOBAL_LEDGER_KEY
+    data_type: string
+  - name: GL_ACCOUNT_NAME
+    data_type: string
+  - name: GL_ACCOUNT_CODE
+    data_type: string
+  - name: ACCOUNT_TYPE
+    data_type: string
+  - name: COMPANY_ENTITY
+    data_type: string
+  - name: NAVISION_DATABASE
+    data_type: string
+  - name: DEBIT_CREDIT
+    data_type: string
+  - name: INCOME_BALANCE
+    data_type: string
+  - name: INDENTATION
+    data_type: string
+  - name: IS_NEW_PAGE
+    data_type: boolean
+  - name: NUMBER_OF_BLANK_LINES
+    data_type: decimal(38,0)
+  - name: TRADER_POSTING_GROUP
+    data_type: string
+  - name: PARENT_GLOBAL_ACCOUNT_ID
+    data_type: string
+  - name: PARENT_GLOBAL_LEDGER_KEY
+    data_type: string
+  - name: COMPANY_NAME
+    data_type: string
+connection_id: snowflake.connection
+table: VW_ACCOUNTING_GENERAL_LEDGER_ACCOUNT

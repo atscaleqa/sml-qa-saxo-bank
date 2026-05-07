@@ -1,0 +1,40 @@
+unique_name: VW_OFFICE.dataset
+object_type: dataset
+label: VW_OFFICE.dataset
+connection_id: snowflake.connection
+table: VW_OFFICE
+immutable: true
+
+columns:
+  - name: DW_CREATE_DATE
+    data_type: datetime
+  - name: DW_FROM_DATE
+    data_type: datetime
+  - name: DW_IS_CURRENT
+    data_type: boolean
+  - name: DW_TO_DATE
+    data_type: datetime
+  - name: DW_UPDATE_DATE
+    data_type: datetime
+  - name: HK_OFFICE
+    data_type: string
+  - name: OFFICE
+    data_type: string
+  - name: OFFICE_ID
+    data_type: "decimal(38,0)"
+  - name: OFFICE_LEVEL1
+    data_type: "decimal(38,0)"
+  - name: OFFICE_LEVEL1_NAME
+    data_type: string
+  - name: OFFICE_LEVEL2
+    data_type: "decimal(38,0)"
+  - name: OFFICE_LEVEL2_NAME
+    data_type: string
+  - name: REGION
+    data_type: string
+  - name: REGION_ID
+    data_type: "decimal(38,0)"
+  - name: REPORTING_REGION
+    data_type: string
+  - name: REPORTING_REGION_ID
+    data_type: "decimal(38,0)"

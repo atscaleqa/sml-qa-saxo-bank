@@ -1,0 +1,42 @@
+unique_name: VW_REAL_EARNINGS_HIERARCHY.dataset
+object_type: dataset
+label: VW_REAL_EARNINGS_HIERARCHY.dataset
+connection_id: snowflake.connection
+table: VW_REAL_EARNINGS_HIERARCHY
+immutable: true
+
+columns:
+  - name: DW_DATE_LOAD
+    data_type: datetime
+  - name: DW_FROM_DATE
+    data_type: date
+  - name: DW_TO_DATE
+    data_type: date
+  - name: EGO_ATTAIN_KEY
+    data_type: string
+  - name: EGO_BOOKING_ACCOUNT_TYPE
+    data_type: string
+  - name: EGO_BOOKING_TYPE
+    data_type: string
+  - name: EXCEPTION
+    data_type: string
+  - name: FROM_DATE
+    data_type: date
+  - name: HASH_DIFF
+    data_type: string
+  - name: ID
+    data_type: string
+  - name: INTERNAL_PL_ID
+    data_type: string
+  - name: PRODUCT_HIERARCHY_LEVEL_1
+    data_type: string
+  - name: PRODUCT_HIERARCHY_LEVEL_2
+    data_type: string
+  - name: SHAREPOINT_HIERARCHY_ID
+    data_type: "decimal(38,0)"
+  - name: SUB_TYPE
+    data_type: string
+  - name: TO_DATE
+    data_type: date
+  - name: VIEW_DESCRIPTION
+    data_type: string
