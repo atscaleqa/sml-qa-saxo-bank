@@ -1,8 +1,0 @@
-unique_name: m_REAL_EARNINGS_DKK_sum
-object_type: metric
-label: Real Earnings DKK
-calculation_method: sum
-column: REAL_EARNINGS_DKK
-dataset: VW_REAL_EARNINGS.dataset
-format: standard
-unrelated_dimensions_handling: repeat
