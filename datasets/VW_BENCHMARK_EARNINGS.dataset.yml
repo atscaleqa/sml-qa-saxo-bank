@@ -1,66 +1,59 @@
 unique_name: VW_BENCHMARK_EARNINGS.dataset
 object_type: dataset
 label: VW_BENCHMARK_EARNINGS.dataset
-connection_id: snowflake.connection
-table: VW_BENCHMARK_EARNINGS
-incremental:
-  column: UNIX_TIMESTAMP
-  grace_period: 10368000s
-immutable: true
-
 columns:
   - name: AMOUNT_EUR
-    data_type: "decimal(38,19)"
+    data_type: decimal(38,19)
   - name: BATCH_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: BENCHMARK_EARNING_DKK
-    data_type: "decimal(38,19)"
+    data_type: decimal(38,19)
   - name: BME_COMPONENT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: BUSINESS_LINE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: BUSINESS_LINE_ID_INTERNAL
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: BUSINESS_LINE_NAME
     data_type: string
   - name: BUY_SELL
     data_type: string
   - name: CLIENT_SEGMENT_REPORTING_LEVEL_1_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: CLIENT_SEGMENT_REPORTING_LEVEL_1_NAME
     data_type: string
   - name: CLOSING_RATE_EUR_DKK
-    data_type: "decimal(18,13)"
+    data_type: decimal(18,13)
   - name: COMPONENT_SYSTEM
     data_type: string
   - name: CONTRACT_ID_INTERNAL
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: CONTRACT_IS_SEGREGATED
     data_type: boolean
   - name: CONTRACTUAL_SOLUTION_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: CONTRACTUAL_SOLUTION_NAME
     data_type: string
   - name: COUNTERPART_ID_INTERNAL
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: COUNTERPART_OWNER_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: COUNTERPART_SUB_TYPE
     data_type: string
   - name: COUNTERPART_TYPE
     data_type: string
   - name: COUNTERPART_TYPE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: CURRENCY_CODE
     data_type: string
   - name: DESK_CURRENCY_PAIR_CATEGORY_NAME
     data_type: string
   - name: EARNINGS_TYPE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: EGO_ATTAIN_KEY
     data_type: string
   - name: EXCHANGE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: HK_COMPOSITE_INSTRUMENT
     data_type: string
   - name: HK_COMPOSITE_INTERNAL_ACCOUNT
@@ -90,49 +83,49 @@ columns:
   - name: INSTRUMENT_BASE_CONTRACT_IDENTIFIER
     data_type: string
   - name: INSTRUMENT_UIC
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: IS_BME_FIRST_30_DAYS
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: IS_BME_LAST_30_DAYS
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: LEGAL_ENTITY_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: LOAD_TIMESTAMP
     data_type: datetime
   - name: MARKET_SEGMENT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: OFFICE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORDER_PLACEMENT_TOOL_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORIGINAL_ACCOUNT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORIGINAL_ACCOUNT_PREFIX
     data_type: string
   - name: ORIGINAL_ATTAIN_KEY
     data_type: string
   - name: ORIGINAL_CONTRACT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORIGINAL_COUNTERPART_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORIGINATING_TOOL_HINT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
     data_type: string
   - name: ORIGINATING_TOOL_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: PARTNER_ACCOUNT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: PARTNER_ACCOUNT_PREFIX
     data_type: string
   - name: PARTNER_ATTAIN_KEY
     data_type: string
   - name: PARTNER_CONTRACT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: PARTNER_COUNTERPART_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: PRODUCT_CATEGORY_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: PRODUCT_CODE
     data_type: string
   - name: REAL_EARNINGS_HIERARCHY_ID
@@ -140,13 +133,13 @@ columns:
   - name: SOURCE_SYSTEM
     data_type: string
   - name: SUBSIDIARY_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: SYMBOL_CODE
     data_type: string
   - name: TARGET_ACCOUNT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TARGET_ACCOUNT_ID_INTERNAL
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TARGET_ACCOUNT_PREFIX
     data_type: string
   - name: TARGET_ATTAIN_KEY
@@ -154,26 +147,35 @@ columns:
   - name: TARGET_ATTAIN_KEY_INTERNAL
     data_type: string
   - name: TARGET_CONTRACT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TARGET_COUNTERPART_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TIME_ZONE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TOOL_HINT_SCHEMA_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TOP_LEVEL_CONTRACT_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TRADE_DATE
     data_type: date
   - name: TRADE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TRADE_MARKER_RECOMMENDATION_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TRADED_CURRENCY_CATEGORY
     data_type: string
   - name: TRE_SHARING_GROUPING_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: TYPE_ID
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
   - name: UNIX_TIMESTAMP
-    data_type: "decimal(38,0)"
+    data_type: decimal(38,0)
+  - name: UNIX_Timestamp_to_YEAR
+    data_type: decimal(4,0)
+    sql: DATE_PART('year', TO_TIMESTAMP(unix_timestamp))
+connection_id: snowflake.connection
+immutable: true
+incremental:
+  column: UNIX_TIMESTAMP
+  grace_period: '10368000'
+table: VW_BENCHMARK_EARNINGS

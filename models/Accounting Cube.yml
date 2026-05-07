@@ -38,7 +38,6 @@ aggregates:
         dimension: Dates
     metrics:
       - m_BENCHMARK_EARNING_DKK_sum
-      - m_ALLOCATION_AMOUNT_DKK_sum
 metrics:
   - unique_name: TRE Allocated
     folder: MME Allocation
