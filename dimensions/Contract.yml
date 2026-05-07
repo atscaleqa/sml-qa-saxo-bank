@@ -1,0 +1,304 @@
+unique_name: Contract
+object_type: dimension
+label: Contract
+description: 'Clients: Contract information'
+hierarchies:
+  - unique_name: By Commercial Solution Group
+    label: By Commercial Solution Group
+    levels:
+      - unique_name: Commercial Solution Group
+        secondary_attributes:
+          - unique_name: d_COMMERCIAL_SOLUTION_GROUP_NAME
+            label: Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - COMMERCIAL_SOLUTION_GROUP_NAME
+            name_column: COMMERCIAL_SOLUTION_GROUP_NAME
+            sort_column: COMMERCIAL_SOLUTION_GROUP_NAME
+      - unique_name: ContractName
+        secondary_attributes:
+          - unique_name: d_CONTRACT_NAME
+            label: Contract Name
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - CONTRACT_NAME
+            name_column: CONTRACT_NAME
+            sort_column: CONTRACT_NAME
+      - unique_name: HKCompositeContract
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_BUSINESS_LINE_NAME
+            label: Business Line
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - BUSINESS_LINE_NAME
+            name_column: BUSINESS_LINE_NAME
+            sort_column: BUSINESS_LINE_NAME
+          - unique_name: d_CLOSING_OFFICE_NAME
+            label: Contract Closing Office Name
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - CLOSING_OFFICE_NAME
+            name_column: CLOSING_OFFICE_NAME
+            sort_column: CLOSING_OFFICE_NAME
+          - unique_name: d_COMMERCIAL_TRADER_SEGMENT_NAME
+            label: Commercial Trader Segment
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - COMMERCIAL_TRADER_SEGMENT_NAME
+            name_column: COMMERCIAL_TRADER_SEGMENT_NAME
+            sort_column: COMMERCIAL_TRADER_SEGMENT_NAME
+          - unique_name: d_CONTRACT_ID
+            label: Contract ID
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - CONTRACT_ID
+            name_column: CONTRACT_ID
+            sort_column: CONTRACT_ID
+          - unique_name: d_CONTRACT_LAST_TRADE_DATE_RAKK
+            label: Last Trade Date RAKK
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Events_RAKK
+            key_columns:
+              - CONTRACT_LAST_TRADE_DATE
+            name_column: CONTRACT_LAST_TRADE_DATE
+            sort_column: CONTRACT_LAST_TRADE_DATE
+          - unique_name: d_CONTRACT_TYPE
+            label: Contract Type
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - CONTRACT_TYPE
+            name_column: CONTRACT_TYPE
+            sort_column: CONTRACT_TYPE
+          - unique_name: d_COUNTRY_OF_RESIDENCE
+            label: Country Of Residence
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - COUNTRY_OF_RESIDENCE
+            name_column: COUNTRY_OF_RESIDENCE
+            sort_column: COUNTRY_OF_RESIDENCE
+          - unique_name: d_INSTITUTIONAL_LIFECYCLE_STATE_NAME
+            label: Institutional Lifecycle State
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: State
+            key_columns:
+              - INSTITUTIONAL_LIFECYCLE_STATE_NAME
+            name_column: INSTITUTIONAL_LIFECYCLE_STATE_NAME
+            sort_column: INSTITUTIONAL_LIFECYCLE_STATE_NAME
+          - unique_name: d_LEGAL_ENTITY_NAME
+            label: Legal Entity
+            associated_hierarchy: By Commercial Solution Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Attribute
+            key_columns:
+              - LEGAL_ENTITY_NAME
+            name_column: LEGAL_ENTITY_NAME
+            sort_column: LEGAL_ENTITY_NAME
+          - unique_name: d_SEGMENT_VALUE_NAME
+            label: Segment Value
+            associated_hierarchy: By Contractual Group
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - SEGMENT_VALUE_NAME
+            name_column: SEGMENT_VALUE_NAME
+            sort_column: SEGMENT_VALUE_NAME
+          - unique_name: Contract Secondary Attribute
+            label: Contract Secondary Attribute
+            contains_unique_names: false
+            dataset: VW_DIM_CONTRACT.dataset
+            is_unique_key: false
+            key_columns:
+              - CONTRACT_LAST_TRADE_DATE
+            name_column: CONTRACT_LAST_TRADE_DATE
+          - unique_name: d_Contract_Last_Trade_Date
+            label: Contract Last Trade Date
+            contains_unique_names: false
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Events_RAKK
+            is_unique_key: false
+            key_columns:
+              - CON_LAST_TRADE_DATE
+            name_column: CON_LAST_TRADE_DATE
+            sort_column: CON_LAST_TRADE_DATE
+  - unique_name: By Contractual Group
+    label: By Contractual Group
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Contractual Solution Name
+        secondary_attributes:
+          - unique_name: d_CONTRACTUAL_SOLUTION_NAME
+            label: Contractual Solution
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Segmentation
+            key_columns:
+              - CONTRACTUAL_SOLUTION_NAME
+            name_column: CONTRACTUAL_SOLUTION_NAME
+            sort_column: CONTRACTUAL_SOLUTION_NAME
+      - unique_name: HKCompositeContract
+        is_hidden: true
+  - unique_name: By Top Level Contract
+    label: By Top Level Contract
+    filter_empty: 'yes'
+    levels:
+      - unique_name: ContractName
+      - unique_name: HKCompositeContract
+        is_hidden: true
+  - unique_name: By Creation
+    label: By Creation
+    filter_empty: 'yes'
+    folder: Events
+    levels:
+      - unique_name: Creation Year
+      - unique_name: Creation Month
+      - unique_name: Creation Date
+        secondary_attributes:
+          - unique_name: d_CONTRACT_CREATED_DATE
+            label: Creation Date
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Events
+            key_columns:
+              - CONTRACT_CREATED_DATE
+            name_column: CONTRACT_CREATED_DATE
+            sort_column: CONTRACT_CREATED_DATE
+      - unique_name: HKCompositeContract
+        is_hidden: true
+  - unique_name: By First Trade
+    label: By First Trade
+    filter_empty: 'yes'
+    folder: Events
+    levels:
+      - unique_name: First Trade Year
+      - unique_name: First Trade Month
+      - unique_name: By First Trade Level
+        secondary_attributes:
+          - unique_name: d_CONTRACT_FIRST_TRADE_DATE
+            label: First Trade Date
+            dataset: VW_DIM_CONTRACT.dataset
+            folder: Events
+            key_columns:
+              - CONTRACT_FIRST_TRADE_DATE
+            name_column: CONTRACT_FIRST_TRADE_DATE
+            sort_column: CONTRACT_FIRST_TRADE_DATE
+      - unique_name: HKCompositeContract
+        is_hidden: true
+level_attributes:
+  - unique_name: By First Trade Level
+    label: First Trade Date
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_FIRST_TRADE_DATE
+    name_column: CONTRACT_FIRST_TRADE_DATE
+  - unique_name: Commercial Solution Group
+    label: Commercial Solution Group
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - COMMERCIAL_SOLUTION_GROUP_NAME
+    name_column: COMMERCIAL_SOLUTION_GROUP_NAME
+  - unique_name: ContractName
+    label: Contract Name
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_NAME
+    name_column: CONTRACT_NAME
+  - unique_name: Contractual Solution Name
+    label: Contractual Solution Name
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACTUAL_SOLUTION_NAME
+    name_column: CONTRACTUAL_SOLUTION_NAME
+  - unique_name: Creation Date
+    label: Creation Date
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_CREATED_DATE
+    name_column: CONTRACT_CREATED_DATE
+  - unique_name: Creation Month
+    label: Creation Month
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_CREATED_YEAR_MONTH
+    name_column: CONTRACT_CREATED_YEAR_MONTH
+  - unique_name: Creation Year
+    label: Creation Year
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_CREATED_YEAR
+    name_column: CONTRACT_CREATED_YEAR
+  - unique_name: First Trade Month
+    label: First Trade Month
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_FIRST_TRADE_DATE_YEAR_MONTH
+    name_column: CONTRACT_FIRST_TRADE_DATE_YEAR_MONTH
+  - unique_name: First Trade Year
+    label: First Trade Year
+    dataset: VW_DIM_CONTRACT.dataset
+    key_columns:
+      - CONTRACT_FIRST_TRADE_DATE_YEAR
+    name_column: CONTRACT_FIRST_TRADE_DATE_YEAR
+  - unique_name: HKCompositeContract
+    label: HKCompositeContract
+    dataset: VW_DIM_CONTRACT.dataset
+    is_hidden: true
+    is_unique_key: true
+    key_columns:
+      - HK_COMPOSITE_CONTRACT
+    name_column: HK_COMPOSITE_CONTRACT
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+relationships:
+  - unique_name: Contract_TopLevelContract
+    from:
+      dataset: VW_DIM_CONTRACT.dataset
+      hierarchy: By Commercial Solution Group
+      join_columns:
+        - HK_TOP_LEVEL_CONTRACT
+      level: HKCompositeContract
+    to:
+      dimension: Top Level Contract
+      level: Top Level Contract Level
+    type: embedded
+  - unique_name: Contract_Office_Tax
+    from:
+      dataset: VW_DIM_CONTRACT.dataset
+      hierarchy: By Commercial Solution Group
+      join_columns:
+        - HK_TAX_OFFICE
+      level: HKCompositeContract
+    role_play: Tax {0}
+    to:
+      dimension: Office
+      level: Office Level
+    type: embedded
+  - unique_name: Contract_Office_Reporting
+    from:
+      dataset: VW_DIM_CONTRACT.dataset
+      hierarchy: By Commercial Solution Group
+      join_columns:
+        - HK_REPORTING_OFFICE
+      level: HKCompositeContract
+    role_play: Reporting {0}
+    to:
+      dimension: Office
+      level: Office Level
+    type: embedded
+type: standard

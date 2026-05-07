@@ -1,0 +1,48 @@
+unique_name: Earnings
+object_type: dimension
+label: Earnings
+hierarchies:
+  - unique_name: Earnings Hierarchy
+    label: Earnings Hierarchy
+    levels:
+      - unique_name: EarningsLevel 02
+      - unique_name: EarningsLevel 03
+      - unique_name: EarningsLevel 04
+      - unique_name: EarningsLevel 05
+        secondary_attributes:
+          - unique_name: d_EARNING_TYPE_GROUP
+            label: Earnings Group
+            dataset: VW_EARNINGS_TYPE.dataset
+            key_columns:
+              - EARNING_TYPE_GROUP
+            name_column: EARNING_TYPE_GROUP
+            sort_column: EARNING_TYPE_GROUP
+level_attributes:
+  - unique_name: EarningsLevel 02
+    label: Level 02
+    dataset: VW_EARNINGS_TYPE.dataset
+    key_columns:
+      - EARNING_TYPE_NAME_LEVEL1
+    name_column: EARNING_TYPE_NAME_LEVEL1
+  - unique_name: EarningsLevel 03
+    label: Level 03
+    dataset: VW_EARNINGS_TYPE.dataset
+    key_columns:
+      - EARNING_TYPE_NAME_LEVEL2
+    name_column: EARNING_TYPE_NAME_LEVEL2
+  - unique_name: EarningsLevel 04
+    label: Level 04
+    dataset: VW_EARNINGS_TYPE.dataset
+    key_columns:
+      - EARNING_TYPE_NAME_LEVEL3
+    name_column: EARNING_TYPE_NAME_LEVEL3
+  - unique_name: EarningsLevel 05
+    label: Level 05
+    dataset: VW_EARNINGS_TYPE.dataset
+    key_columns:
+      - EARNING_TYPE_ID
+    name_column: EARNING_TYPE_NAME
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

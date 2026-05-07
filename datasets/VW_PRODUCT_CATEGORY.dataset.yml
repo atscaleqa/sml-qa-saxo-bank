@@ -1,0 +1,28 @@
+unique_name: VW_PRODUCT_CATEGORY.dataset
+object_type: dataset
+label: VW_PRODUCT_CATEGORY.dataset
+connection_id: snowflake.connection
+table: VW_PRODUCT_CATEGORY
+immutable: true
+
+columns:
+  - name: PARENT_PRODUCT_CATEGORY_ID
+    data_type: string
+  - name: PRODUCT_CATEGORY
+    data_type: string
+  - name: PRODUCT_CATEGORY_ID
+    data_type: "decimal(38,0)"
+  - name: PRODUCT_CATEGORY_ID_LEVEL_1
+    data_type: "decimal(38,0)"
+  - name: PRODUCT_CATEGORY_ID_LEVEL_2
+    data_type: "decimal(38,5)"
+  - name: PRODUCT_CATEGORY_ID_LEVEL_3
+    data_type: "decimal(38,0)"
+  - name: PRODUCT_CATEGORY_LEVEL_1
+    data_type: string
+  - name: PRODUCT_CATEGORY_LEVEL_2
+    data_type: string
+  - name: PRODUCT_CATEGORY_LEVEL_3
+    data_type: string
+  - name: PRODUCT_CODE
+    data_type: string

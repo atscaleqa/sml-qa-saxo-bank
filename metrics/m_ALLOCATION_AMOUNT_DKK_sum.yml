@@ -1,0 +1,8 @@
+unique_name: m_ALLOCATION_AMOUNT_DKK_sum
+object_type: metric
+label: Allocation Amount DKK
+calculation_method: sum
+format: standard
+unrelated_dimensions_handling: repeat
+dataset: VW_MME_ALLOCATION.dataset
+column: ALLOCATION_AMOUNT_DKK

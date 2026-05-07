@@ -1,0 +1,28 @@
+unique_name: VW_BME_COMPONENTS.dataset
+object_type: dataset
+label: VW_BME_COMPONENTS.dataset
+connection_id: snowflake.connection
+table: VW_BME_COMPONENTS
+immutable: true
+
+columns:
+  - name: AGG_AMOUNT_TYPE_ID
+    data_type: "decimal(38,0)"
+  - name: BME_COMPONENT_NAME
+    data_type: string
+  - name: CODE
+    data_type: "decimal(38,0)"
+  - name: CUBE_BME_COMPONENT_NAME
+    data_type: string
+  - name: EARNING_CODE
+    data_type: "decimal(38,0)"
+  - name: EARNING_ID
+    data_type: "decimal(38,0)"
+  - name: EARNING_NAME
+    data_type: string
+  - name: IS_PROD_CODE
+    data_type: "decimal(38,0)"
+  - name: LAST_CHANGED
+    data_type: "decimal(38,0)"
+  - name: NAME
+    data_type: string

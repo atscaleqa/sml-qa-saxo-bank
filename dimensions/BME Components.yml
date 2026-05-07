@@ -1,0 +1,29 @@
+unique_name: BME Components
+object_type: dimension
+label: BME Components
+hierarchies:
+  - unique_name: BME Components Hierarchy
+    label: BME Components Hierarchy
+    levels:
+      - unique_name: BME Components Level
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_BME_COMPONENT_NAME
+            label: BME Components Name
+            dataset: VW_BME_COMPONENTS.dataset
+            key_columns:
+              - CUBE_BME_COMPONENT_NAME
+            name_column: CUBE_BME_COMPONENT_NAME
+            sort_column: CUBE_BME_COMPONENT_NAME
+level_attributes:
+  - unique_name: BME Components Level
+    label: BME Components Level
+    dataset: VW_BME_COMPONENTS.dataset
+    is_hidden: true
+    key_columns:
+      - CODE
+    name_column: CODE
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard

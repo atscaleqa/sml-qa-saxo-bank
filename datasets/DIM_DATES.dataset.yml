@@ -1,0 +1,78 @@
+unique_name: DIM_DATES.dataset
+object_type: dataset
+label: DIM_DATES.dataset
+connection_id: snowflake.connection
+table: VW_DATES
+immutable: true
+
+columns:
+  - name: DATE
+    data_type: date
+  - name: DATE_ID_INT
+    data_type: "decimal(38,0)"
+  - name: DATE_STRING
+    data_type: string
+  - name: DATES_AGO
+    data_type: "decimal(38,0)"
+  - name: DAY
+    data_type: "decimal(38,0)"
+  - name: FIRSTDATEOFMONTH
+    data_type: date
+  - name: HK_DATE
+    data_type: string
+  - name: IS_CURRENT_MONTH
+    data_type: boolean
+  - name: IS_CURRENT_QUARTER
+    data_type: boolean
+  - name: IS_CURRENT_WEEK
+    data_type: boolean
+  - name: IS_CURRENT_YEAR
+    data_type: boolean
+  - name: IS_LAST_TRADE_DATE
+    data_type: boolean
+  - name: IS_PREVIOUS_TRADE_DATE
+    data_type: boolean
+  - name: IS_TRADING_DAY
+    data_type: boolean
+  - name: ISLAST12MONTHS
+    data_type: "decimal(1,0)"
+  - name: ISLAST18MONTHS
+    data_type: "decimal(1,0)"
+  - name: ISLAST24MONTHS
+    data_type: "decimal(1,0)"
+  - name: ISLAST6MONTHS
+    data_type: "decimal(1,0)"
+  - name: ISLAST90DAYS
+    data_type: "decimal(1,0)"
+  - name: LAST_TRADING_DATE
+    data_type: date
+  - name: MONTH
+    data_type: "decimal(38,0)"
+  - name: MONTH_NAME
+    data_type: string
+  - name: MONTHS_AGO
+    data_type: "decimal(38,0)"
+  - name: PREVIOUS_TRADING_DATE
+    data_type: date
+  - name: QUARTER
+    data_type: "decimal(38,0)"
+  - name: QUARTER_NAME
+    data_type: string
+  - name: QUARTERS_AGO
+    data_type: "decimal(20,0)"
+  - name: WEEK
+    data_type: "decimal(38,0)"
+  - name: WEEK_DAY
+    data_type: string
+  - name: WEEK_DAY_NAME
+    data_type: string
+  - name: WEEK_NAME
+    data_type: string
+  - name: WEEK_YEAR
+    data_type: "decimal(38,0)"
+  - name: WEEKS_AGO
+    data_type: "decimal(20,0)"
+  - name: YEAR
+    data_type: "decimal(38,0)"
+  - name: YEARS_AGO
+    data_type: "decimal(38,0)"

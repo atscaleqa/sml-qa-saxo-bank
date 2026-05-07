@@ -1,0 +1,12 @@
+unique_name: VW_BUY_SELL.dataset
+object_type: dataset
+label: VW_BUY_SELL.dataset
+connection_id: snowflake.connection
+table: VW_BUY_SELL
+immutable: true
+
+columns:
+  - name: BUYSELL
+    data_type: string
+  - name: BUYSELLID
+    data_type: "decimal(1,0)"

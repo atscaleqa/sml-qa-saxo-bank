@@ -1,0 +1,118 @@
+unique_name: MME
+object_type: model
+label: MME
+dimensions:
+  - MME Allocation Rule Type
+include_default_drillthrough: true
+metrics:
+  - unique_name: m_ALLOCATION_AMOUNT_DKK_sum
+    folder: MME Allocation
+  - unique_name: m_ESTIMATED_ALLOCATION_AMOUNT_DKK_sum
+    folder: MME Allocation
+relationships:
+  - unique_name: VW_MME_ALLOCATION.dataset_Counterpart
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - HK_COMPOSITE_COUNTERPART
+    to:
+      dimension: Counterpart
+      level: Counterpart Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Subsidiaries
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - SUBSIDIARY_ID
+    to:
+      dimension: Subsidiaries
+      level: Subsidiaries Level
+  - unique_name: VW_MME_ALLOCATION.dataset_MME_Allocation_Rules
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - MME_RULES_GENERAL_ALLOCATION_ID
+    to:
+      dimension: MME Allocation Rules
+      level: MME Allocation Rules Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Contract
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - HK_COMPOSITE_CONTRACT
+    to:
+      dimension: Contract
+      level: HKCompositeContract
+  - unique_name: VW_MME_ALLOCATION.dataset_Order_Placement_Tools_OrderPlacementTools
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - ORDER_PLACEMENT_TOOL_ID
+    role_play: Order Placement Tools {0}
+    to:
+      dimension: Order Placement Tools
+      level: Order Placement Tools Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Order_Placement_Tools_OriginatingTool
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - ORIGINATING_TOOL_ID
+    role_play: Originating Tool {0}
+    to:
+      dimension: Order Placement Tools
+      level: Order Placement Tools Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Real_Earnings_Hierarchies
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - REAL_EARNINGS_HIERARCHY_ID
+    to:
+      dimension: Real Earnings Hierarchies
+      level: Real Earnings Hierarchies Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Instruments
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - HK_COMPOSITE_INSTRUMENT
+    to:
+      dimension: Instruments
+      level: Instruments Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Earnings
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - EARNINGS_TYPE_ID
+    to:
+      dimension: Earnings
+      level: EarningsLevel 05
+  - unique_name: VW_MME_ALLOCATION.dataset_Accounts
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - HK_COMPOSITE_ACCOUNT
+    to:
+      dimension: Accounts
+      level: Accounts Level
+  - unique_name: VW_MME_ALLOCATION.dataset_Dates
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - POSTING_DATE
+    to:
+      dimension: Dates
+      level: Date1
+  - unique_name: VW_MME_ALLOCATION.dataset_Originating_Tool_Hint
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
+    to:
+      dimension: Originating Tool Hint
+      level: Originating Tool Hint Schema Id Key
+  - unique_name: VW_MME_ALLOCATION.dataset_Products
+    from:
+      dataset: VW_MME_ALLOCATION.dataset
+      join_columns:
+        - PRODUCT_CATEGORY_ID
+    to:
+      dimension: Products
+      level: Products Level

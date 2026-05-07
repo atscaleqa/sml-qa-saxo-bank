@@ -1,0 +1,13 @@
+unique_name: VW_REAL_EARNINGS_POSTING_SOURCES.dataset
+object_type: dataset
+label: VW_REAL_EARNINGS_POSTING_SOURCES.dataset
+connection_id: snowflake.connection
+table: VW_REAL_EARNINGS_POSTING_SOURCES
+
+columns:
+  - name: COMPONENT_SYSTEM_ID
+    data_type: "decimal(38,0)"
+  - name: COMPONENT_SYSTEM_NAME
+    data_type: string
+  - name: POSTING_SOURCE
+    data_type: string

@@ -1,0 +1,116 @@
+unique_name: Real Earnings Hierarchies
+object_type: dimension
+label: Real Earnings Hierarchies
+hierarchies:
+  - unique_name: Real Earnings Hierarchies Hierarchy
+    label: Real Earnings Hierarchies
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Product Hierarchy Level1
+        secondary_attributes:
+          - unique_name: d_PRODUCT_HIERARCHY_LEVEL_1
+            label: Product Hierarchy Level1
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - PRODUCT_HIERARCHY_LEVEL_1
+            name_column: PRODUCT_HIERARCHY_LEVEL_1
+            sort_column: PRODUCT_HIERARCHY_LEVEL_1
+      - unique_name: Product Hierarchy Level2
+        secondary_attributes:
+          - unique_name: d_PRODUCT_HIERARCHY_LEVEL_2
+            label: Product Hierarchy Level2
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - PRODUCT_HIERARCHY_LEVEL_2
+              - PRODUCT_HIERARCHY_LEVEL_1
+            name_column: PRODUCT_HIERARCHY_LEVEL_2
+            sort_column: PRODUCT_HIERARCHY_LEVEL_2
+      - unique_name: EGO Booking Type
+        secondary_attributes:
+          - unique_name: d_EGO_BOOKING_TYPE
+            label: EGO Booking Type
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - EGO_BOOKING_TYPE
+              - PRODUCT_HIERARCHY_LEVEL_2
+            name_column: EGO_BOOKING_TYPE
+            sort_column: EGO_BOOKING_TYPE
+      - unique_name: View Description
+        secondary_attributes:
+          - unique_name: d_VIEW_DESCRIPTION
+            label: View Description
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - VIEW_DESCRIPTION
+            name_column: VIEW_DESCRIPTION
+            sort_column: VIEW_DESCRIPTION
+      - unique_name: EGO AttainKey
+        secondary_attributes:
+          - unique_name: d_EGO_ATTAIN_KEY
+            label: EGO AttainKey
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - EGO_ATTAIN_KEY
+            name_column: EGO_ATTAIN_KEY
+            sort_column: EGO_ATTAIN_KEY
+      - unique_name: Real Earnings Hierarchies Level
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: d_EGO_BOOKING_ACCOUNT_TYPE
+            label: EBT Booking Account Type
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - EGO_BOOKING_ACCOUNT_TYPE
+            name_column: EGO_BOOKING_ACCOUNT_TYPE
+            sort_column: EGO_BOOKING_ACCOUNT_TYPE
+          - unique_name: d_SUB_TYPE
+            label: EBT Sub Type
+            dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+            key_columns:
+              - SUB_TYPE
+            name_column: SUB_TYPE
+            sort_column: SUB_TYPE
+level_attributes:
+  - unique_name: EGO AttainKey
+    label: EGO AttainKey
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    key_columns:
+      - EGO_ATTAIN_KEY
+    name_column: EGO_ATTAIN_KEY
+  - unique_name: EGO Booking Type
+    label: EGO Booking Type
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    key_columns:
+      - EGO_BOOKING_TYPE
+      - PRODUCT_HIERARCHY_LEVEL_2
+    name_column: EGO_BOOKING_TYPE
+  - unique_name: Product Hierarchy Level1
+    label: Product Hierarchy Level1
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    key_columns:
+      - PRODUCT_HIERARCHY_LEVEL_1
+    name_column: PRODUCT_HIERARCHY_LEVEL_1
+  - unique_name: Product Hierarchy Level2
+    label: Product Hierarchy Level2
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    key_columns:
+      - PRODUCT_HIERARCHY_LEVEL_2
+      - PRODUCT_HIERARCHY_LEVEL_1
+    name_column: PRODUCT_HIERARCHY_LEVEL_2
+  - unique_name: Real Earnings Hierarchies Level
+    label: Real Earnings Hierarchies Level
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    is_hidden: true
+    key_columns:
+      - ID
+    name_column: ID
+  - unique_name: View Description
+    label: View Description
+    dataset: VW_REAL_EARNINGS_HIERARCHY.dataset
+    key_columns:
+      - VIEW_DESCRIPTION
+    name_column: VIEW_DESCRIPTION
+modeler_metadata:
+  version: '0'
+  modified: 'false'
+type: standard
