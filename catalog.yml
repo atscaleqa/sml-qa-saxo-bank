@@ -1,4 +1,4 @@
-version: 1.5
+version: 1.7
 unique_name: Snowflake Cubes.catalog
 object_type: catalog
 label: Snowflake Cubes

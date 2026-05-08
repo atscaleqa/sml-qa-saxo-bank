@@ -176,6 +176,11 @@ columns:
 connection_id: snowflake.connection
 immutable: true
 incremental:
+  agg_partition:
+    column: UNIX_Timestamp_to_YEAR
+    dimension: Dates
+    hierarchy: By Month
+    level: Year1
   column: UNIX_TIMESTAMP
   grace_period: '10368000'
 table: VW_BENCHMARK_EARNINGS

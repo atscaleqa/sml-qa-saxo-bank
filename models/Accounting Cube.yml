@@ -24,8 +24,6 @@ aggregates:
         dimension: Real Earnings Hierarchies
       - name: EGO AttainKey
         dimension: Real Earnings Hierarchies
-      - name: d_TOP_LEVEL_CONTRACT_ID
-        dimension: Top Level Contract
       - name: d_TOP_LEVEL_CONTRACT_NAME
         dimension: Top Level Contract
       - name: ContractName
